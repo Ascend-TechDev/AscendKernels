@@ -1,0 +1,17 @@
+# Distribution / packaging
+dist/
+*.egg-info/
+
+# pytest
+.pytest_cache/
+
+# python
+__pycache__/
+.python-version
+.venv
+
+# benchmark
+perf_traces
+
+# CANN
+fusion_result.json

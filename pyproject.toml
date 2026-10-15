@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AscendKernels"
+version = "0.1.0"
+description = "Ascend NPU operator implementations."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+keywords = ["ascend", "npu", "kernels", "operator", "triton"]
+dependencies = [
+    "triton-ascend==3.2.0",
+    "torch==2.7.1",
+    "torch_npu==2.7.1post2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0.0", "pytest-xdist>=3.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["triton_ascend*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["triton_ascend"]
+pythonpath = ["."]
+python_files = ["test_*.py"]
+addopts = ["-sv"]

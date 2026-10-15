@@ -1,0 +1,14 @@
+# Copyright © 2026 Huawei Technologies Co., Ltd.
+# Based on flash-linear-attention: https://github.com/fla-org/flash-linear-attention
+#
+# This file contains code copied and/or modified from the flash-linear-attention project.
+# The original source code was licensed under the MIT license and included
+# the following copyright notice:
+# Copyright (c) 2023-2026, Songlin Yang, Yu Zhang, Zhiyuan Li
+
+
+from triton_ascend.attention.fla.kda.chunk.chunk import chunk_kda
+
+__all__ = [
+    "chunk_kda",
+]
